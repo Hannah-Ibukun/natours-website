@@ -29,17 +29,14 @@ body {
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-
 .header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
 .header__logo {
   height: 3.5rem;
 }
-
 .header__text-box {
   position: absolute;
   top: 40%;
@@ -54,7 +51,6 @@ body {
   backface-visibility: hidden;
   margin-bottom: 6rem;
 }
-
 .heading-primary--main {
   display: block;
   font-size: 6rem;
@@ -66,7 +62,6 @@ body {
   /* animation-delay: 3s;
   animation-iteration-count: 3; */
 }
-
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
@@ -111,8 +106,7 @@ body {
     transform: translate(0);
   }
 }
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
@@ -122,23 +116,19 @@ body {
   position: relative;
   font-size: 1.6rem;
 }
-
 .btn:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
-
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-0.1rem);
   /* -1px in relation to the link state and not hover state */
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
-
-.btn--white {
-  background-color: #ffffff;
-  color: #777;
-}
-
 .btn::after {
   content: "";
   display: inline-block;
@@ -151,16 +141,13 @@ body {
   z-index: -1;
   transition: all 0.4s;
 }
-
+.btn--white {
+  background-color: #ffffff;
+  color: #777;
+}
 .btn--white::after {
   background-color: #ffffff;
 }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
 .btn--animated {
   /* animation: <animation name> <animation duration> <animation time and function> <animation delay> */
   animation: moveInBottom 0.5s ease-out 0.75s;
