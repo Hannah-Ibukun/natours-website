@@ -48,8 +48,17 @@
   
     &::after {
       background-color: $color-white;
+     }
+    } 
+
+    &--green {
+      background-color: $color-primary;
+      color: $color-white;
+
+      &::after {
+        background-color: $color-primary;
+       }
     }
- } 
 
  &--animated {
   /* animation: <animation name> <animation duration> <animation time and function> <animation delay> */
