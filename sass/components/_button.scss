@@ -2,7 +2,7 @@
 // COMPONENTS //
 /////////////////////////////////////
 .btn {
-  &,
+  &,//added because a button does not have link, visited, hover, and active pseudo classes.
   &:link, 
   &:visited {
     display: inline-block;
