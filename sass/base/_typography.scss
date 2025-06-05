@@ -16,6 +16,11 @@
     animation-duration: 1s;
     animation-timing-function: ease-out;
 
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-family: 5rem;
+    }
+
     /* animation-delay: 3s;
     animation-iteration-count: 3; */
   }
@@ -27,6 +32,10 @@
     letter-spacing: 1.74rem;
 
     animation: moveInRight 1s ease-out;
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
   }
 }
 
@@ -41,6 +50,14 @@
   color: transparent;// to see the linear gradient
   transition: all .2s;
   letter-spacing: .2rem;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 
   &:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);

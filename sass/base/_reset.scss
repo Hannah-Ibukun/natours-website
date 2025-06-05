@@ -15,4 +15,23 @@ html {
     font-size: 10px / 16px = 0.625 * 100 = 62.5%*/
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include respond(tab-land) { // width < 1200? It comes first so that tab-port applies when there is conlict on 500px and because it's max-width. large---to small screenreen
+    font-size: 56.25%;  //1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {  // width < 900? 
+    font-size: 50%;  //1 rem = 8px, 8/16 = 50% 
+  }
+
+
+  @include respond(big-desktop) {
+    font-size: 75%;  //1 rem = 12px, 12/16 = 56.25% This stays here because it's min-width. small---to large screen
+  }
+}
+
+body {
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
