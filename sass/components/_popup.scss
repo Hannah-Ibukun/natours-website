@@ -10,6 +10,11 @@
   visibility: hidden;
   transition: all .3s;
 
+  
+    @include respond(tab-land) {
+     overflow: scroll;
+    }
+
   &__content {
     @include center-horizontal-vertical;
     height: auto;
@@ -29,11 +34,27 @@
     width: 33.333333%;
     display: table-cell;
 
+    @include respond(phone) {
+     display: block;
+     width: 100%;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(phone) {
+
+     &--1 {
+      width: 100%;
+     }
+
+     &--2 {
+      visibility: hidden;
+      height: 0;
+     }
+    }
   }
   
   &__content-right{
@@ -41,6 +62,11 @@
     display: table-cell;
     vertical-align: middle; //Can only be used when table-cell property is used.
     padding: 3rem 5rem;
+
+    @include respond(phone) {
+     display: block;
+     width: 100%;
+    }
   }
 
   &__text{
@@ -59,6 +85,11 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto; //the website language has to be specified for it to work.
+
+    @include respond(phone) {
+      -moz-column-count: 1;
+      column-count: 1;
+    }
   }
 
   
@@ -86,6 +117,12 @@
       text-decoration: none;
       display: inline-block;
       transition: all .2s;
+
+      @include respond(phone) {
+        background-color: $color-white;
+        padding: 1.5rem 2rem;
+        border-radius: 50%;
+      }
     }
 
     &:hover, &:active {
